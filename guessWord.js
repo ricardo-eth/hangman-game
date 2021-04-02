@@ -24,7 +24,6 @@ const line = showLine(letterNumber)
 const lettersArray = randomWord.split('')
 console.log(lettersArray)
 
-
 // letter index position v1
 const letterIndex = (word) => {
     for(var i = 0; i < word.length; i++) {
@@ -33,7 +32,6 @@ const letterIndex = (word) => {
 }
 
 console.log(letterIndex(randomWord))
-
 
 // draw the letter space hide
   let letterSpace = `${showLine(letterNumber)}`
@@ -47,24 +45,8 @@ console.log(letterIndex(randomWord))
 let running = true;
 
 while (running) {
-  const strRandomWord = randomWord;
-
-
-  // letter index position v2
-  const letterIndexV2 = (str, x) => {
-      for(var i = 0; i < str.length; i++) {
-        if (str.charAt(i) == x) {
-          index = i;
-        } 
-      return index;
-    }
-  }
-
-
   
   let lt = readlineSync.question('lt = ? :  ');
-
-  let indexLetter = letterIndexV2(strRandomWord, lt)
 
   // include letter verification
   ltTest = lettersArray.includes(lt)
@@ -74,11 +56,10 @@ while (running) {
   }
   else if (ltTest == true) {
     console.log('Tu es dans le bon chemin garçon')
-    
-    // overide letter space array "_ _ _ _"
+   
     const newArr = letterSpaceArray
-    const i = 2
-    newArr[i] = inputUserLetter
+    const i = randomWord.indexOf(lt)
+    newArr[i] = lt
     console.log(newArr)
   }
   
