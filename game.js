@@ -9,11 +9,11 @@ let running = true;
 
 while (running) {
 // initialisation 
-let hideWord = randomWord
+let wordHide = randomWord
 
 let wordToFind = []
 
-  for (let i = 0; i < hideWord.length; i++) {
+  for (let i = 0; i < wordHide.length; i++) {
     wordToFind.push('_')
   }
 
@@ -29,15 +29,15 @@ let wordToFind = []
 
     letter = readline.question('La lettre : ').toLowerCase()
 
-    for (let i = 0; i < hideWord.length; i++) {
-      hideWord[i] === letter ? wordToFind[i] = letter : '' 
+    for (let i = 0; i < wordHide.length; i++) {
+      wordHide[i] === letter ? wordToFind[i] = letter : '' 
     }
 
-    if (hideWord.includes(letter)) {
-      console.log('Tu es dans le bon chemin garçon')
+    if (wordHide.includes(letter)) {
+      console.log('Tu es sur le bon chemin garçon')
     } else {
       lifeCount--
-      console.log(`C\'est pas la bonne lettre`)
+      console.log(`C\'est pas la bonne lettre attention`)
     }
   }
 }
