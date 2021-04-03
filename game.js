@@ -8,10 +8,10 @@ const { randomWord } = require('./randomWord')
 let running = true;
 
 while (running) {
-// initialisation 
-let wordHide = randomWord
+  // initialisation 
+  let wordHide = randomWord
 
-let wordToFind = []
+  let wordToFind = []
 
   for (let i = 0; i < wordHide.length; i++) {
     wordToFind.push('_')
@@ -37,7 +37,7 @@ let wordToFind = []
       console.log('Tu es sur le bon chemin garçon')
     } else {
       lifeCount--
-      console.log(`C\'est pas la bonne lettre attention`)
+      console.log(`C\'est pas la bonne lettre attention !!`)
     }
   }
 }
