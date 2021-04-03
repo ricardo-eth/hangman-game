@@ -68,12 +68,12 @@ while (running) {
     console.log(chalk.red('==================================================='))
     console.log(chalk.red('==================================================='))
     console.log(chalk.red('==================================================='))
-    console.log(`Word is : ${wordHide}\n\n`)
+    console.log(`Le mot était : ${wordHide}\n\n`)
     let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
     choice === 'y' ? '' : process.exit(1)
   } else {
     console.log('YOU WIN !!!')
-    console.log(`Vous avez trouvé le mot : ${wordHide} !!!!!\n\n`)
+    console.log(`Vous avez trouvé le mot : ${wordHide} !\n\n`)
     let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
     choice === 'y' ? '' : process.exit(1)
   }
