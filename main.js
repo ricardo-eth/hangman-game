@@ -1,5 +1,5 @@
 const Game = require('./game')
-const DICT_PATH = 'dict'
+const DICT_PATH = 'dict.txt'
 
 const game = new Game()
 try {

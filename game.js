@@ -56,9 +56,7 @@ class Game {
           wordHide[i] === letter ? wordToFind[i] = letter : '' 
         }
 
-        console.log(!wordToFind.includes('_'))
-
-        if (wordHide.includes(letter) && !wordToFind.includes('_')) {
+        if (wordHide.includes(letter)) {
           console.log(chalk.green('==================================================='))
           console.log(chalk.green('Tu es sur le bon chemin !'))
           console.log(chalk.green('==================================================='))
