@@ -62,7 +62,7 @@ class Game {
         for (let i = 0; i < wordHide.length; i++) {
           wordHide[i] === letter ? wordToFind[i] = letter : '' 
         }
-
+        console.clear()
         
         if (wordHide.includes(letter)) {
           // import goodWay message
@@ -73,11 +73,11 @@ class Game {
           // import badWay message
           badWay()
         }
+        
       }
       if (lifeCount === 0) {
         // import gameOver message
         gameOver(wordHide)
-
         let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
         choice === 'y' ? '' : process.exit(1)
       } else {

@@ -1,30 +1,35 @@
 const chalk = require('chalk');
 
 exports.welcome = () => {
+console.clear()
 console.log(chalk.blue('==================================================='))
 console.log(chalk.blue('Le jeu du pendu game'))
 console.log(chalk.blue('==================================================='))
 }
 
 exports.lastLife = () => {
+console.clear()
 console.log(chalk.red('==================================================='))
 console.log(chalk.red('Attention il vous reste qu\'une seule vie !!'))
 console.log(chalk.red('==================================================='))
 }
 
 exports.goodWay = () => {
+console.clear()
 console.log(chalk.green('==================================================='))
 console.log(chalk.green('Tu es sur le bon chemin !'))
 console.log(chalk.green('==================================================='))
 }
 
 exports.badWay = () => {
+console.clear()
 console.log(chalk.red('==================================================='))
 console.log(chalk.red('Mauvaise lettre...'))
 console.log(chalk.red('==================================================='))
 }
 
 exports.gameOver = (wordHide) => {
+console.clear()
 console.log(chalk.red(' '))
 console.log(chalk.red('==================================================='))
 console.log(chalk.red('==================================================='))
@@ -36,6 +41,7 @@ console.log(`Le mot était : ${wordHide}\n\n`)
 }
 
 exports.youWin = (wordHide) => {
+console.clear()
 console.log(chalk.green('==================================================='))
 console.log(chalk.green('==================================================='))
 console.log(chalk.green('==================================================='))
