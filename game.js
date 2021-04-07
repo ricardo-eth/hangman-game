@@ -3,6 +3,14 @@ const readline = require('readline-sync')
 const chalk = require('chalk');
 const GameError = require('./gameError')
 
+const { 
+  welcome, 
+  lastLive, 
+  goodWay, 
+  badWay, 
+  gameOver, 
+  youWin} = require('./message')
+
 // import random word function
 const { randomWord } = require('./randomWord')
 
@@ -29,9 +37,9 @@ class Game {
         wordToFind.push('_')
       }
 
-      console.log(chalk.blue('==================================================='))
-      console.log(chalk.blue('Le jeu du pendu game'))
-      console.log(chalk.blue('==================================================='))
+      // import welcome message
+      welcome()
+      //---------
       let lifeCount = 7
       let hangmanPicsFrame = 0
       
@@ -43,9 +51,8 @@ class Game {
         console.log(chalk.blue('==================================================='))
 
         if (lifeCount < 2){
-          console.log(chalk.red('==================================================='))
-          console.log(chalk.red('Attention il vous reste qu\'une seule vie !!'))
-          console.log(chalk.red('==================================================='))
+          // import lastLive message
+          lastLive()
         }
 
         console.log(`Le mot : ${wordToFind.join(' ')}`)
@@ -57,31 +64,23 @@ class Game {
         }
 
         if (wordHide.includes(letter)) {
-          console.log(chalk.green('==================================================='))
-          console.log(chalk.green('Tu es sur le bon chemin !'))
-          console.log(chalk.green('==================================================='))
+          // import goodWay message
+          goodWay()
         } else {
           lifeCount--
           hangmanPicsFrame++
-          console.log(chalk.red('==================================================='))
-          console.log(chalk.red('Mauvaise lettre...'))
-          console.log(chalk.red('==================================================='))
+          // import badWay message
+          badWay()
         }
       }
       if (lifeCount === 0) {
-        console.log(chalk.red(' '))
-        console.log(chalk.red('==================================================='))
-        console.log(chalk.red('==================================================='))
-        console.log(chalk.red('GAME OVER !'))
-        console.log(chalk.red('==================================================='))
-        console.log(chalk.red('==================================================='))
-        console.log(chalk.red('==================================================='))
-        console.log(`Le mot était : ${wordHide}\n\n`)
+        // import gameOver message
+        gameOver(wordHide)
         let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
         choice === 'y' ? '' : process.exit(1)
       } else {
-        console.log('YOU WIN !!!')
-        console.log(`Vous avez trouvé le mot : ${wordHide} !\n\n`)
+        // import youWin message
+        youWin(wordHide)
         let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
         choice === 'y' ? '' : process.exit(1)
       }
