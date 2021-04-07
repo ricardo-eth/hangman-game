@@ -51,8 +51,8 @@ class Game {
         console.log(chalk.blue('==================================================='))
 
         if (lifeCount < 2){
-          // import lastLive message
-          lastLive()
+          // import lastLife message
+          lastLife()
         }
 
         console.log(`Le mot : ${wordToFind.join(' ')}`)
@@ -76,11 +76,13 @@ class Game {
       if (lifeCount === 0) {
         // import gameOver message
         gameOver(wordHide)
+
         let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
         choice === 'y' ? '' : process.exit(1)
       } else {
         // import youWin message
         youWin(wordHide)
+
         let choice = readline.question('Voulez-vous rejouer ?\nYes [y]\nNo [n]\nVotre choix : ')
         choice === 'y' ? '' : process.exit(1)
       }

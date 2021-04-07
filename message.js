@@ -6,7 +6,7 @@ console.log(chalk.blue('Le jeu du pendu game'))
 console.log(chalk.blue('==================================================='))
 }
 
-exports.lastLive = () => {
+exports.lastLife = () => {
 console.log(chalk.red('==================================================='))
 console.log(chalk.red('Attention il vous reste qu\'une seule vie !!'))
 console.log(chalk.red('==================================================='))
