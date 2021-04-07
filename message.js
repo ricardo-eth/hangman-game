@@ -36,6 +36,14 @@ console.log(`Le mot était : ${wordHide}\n\n`)
 }
 
 exports.youWin = (wordHide) => {
-console.log('YOU WIN !!!')
-console.log(`Vous avez trouvé le mot : ${wordHide} !\n\n`)
+console.log(chalk.green('==================================================='))
+console.log(chalk.green('==================================================='))
+console.log(chalk.green('==================================================='))
+console.log('')
+console.log(chalk.green('                   YOU WIN !!!                     '))
+console.log('')
+console.log(`      Vous avez trouvé le mot : ${wordHide} !\n\n       `)
+console.log(chalk.green('==================================================='))
+console.log(chalk.green('==================================================='))
+console.log(chalk.green('==================================================='))
 }

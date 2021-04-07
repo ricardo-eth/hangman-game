@@ -5,7 +5,7 @@ const GameError = require('./gameError')
 
 const { 
   welcome, 
-  lastLive, 
+  lastLife, 
   goodWay, 
   badWay, 
   gameOver, 
@@ -63,9 +63,10 @@ class Game {
           wordHide[i] === letter ? wordToFind[i] = letter : '' 
         }
 
+        
         if (wordHide.includes(letter)) {
           // import goodWay message
-          goodWay()
+           goodWay()
         } else {
           lifeCount--
           hangmanPicsFrame++
