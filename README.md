@@ -1,3 +1,3 @@
 # hangman-game
 
-play the program with the `zsh node main.js` command
+Play the program on your terminal with the `node main.js`
