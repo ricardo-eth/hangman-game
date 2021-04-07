@@ -2,3 +2,8 @@ coucou
 toto
 tata
 coco
+orange
+poulet
+carotte
+chat
+chien
