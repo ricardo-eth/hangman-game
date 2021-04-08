@@ -1,8 +1,5 @@
-
 const fs = require('fs')
 const { randomInt } = require('crypto')
-
-
 
 // ----------------- read file --------------
 // import dict file
@@ -17,6 +14,6 @@ const selectedWord = dicTab
 
 const n = randomInt(0, selectedWord.length)
 
-const randomWord = selectedWord[n]
+const randomWordOutput = selectedWord[n]
 
-exports.randomWord = randomWord
+exports.randomWordOutput = randomWordOutput

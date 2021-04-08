@@ -12,7 +12,7 @@ const {
   youWin} = require('./message')
 
 // import random word function
-const { randomWord } = require('./randomWord')
+const { randomWordOutput } = require('./randomWord')
 
 const { hangmanPics } = require('./hangmanPics')
 
@@ -29,7 +29,7 @@ class Game {
   run() {
     while (true) {
       // initialisation 
-      let wordHide = randomWord
+      let wordHide = randomWordOutput
 
       let wordToFind = []
 
@@ -62,7 +62,6 @@ class Game {
         for (let i = 0; i < wordHide.length; i++) {
           wordHide[i] === letter ? wordToFind[i] = letter : '' 
         }
-        console.clear()
         
         if (wordHide.includes(letter)) {
           // import goodWay message
@@ -73,7 +72,6 @@ class Game {
           // import badWay message
           badWay()
         }
-        
       }
       if (lifeCount === 0) {
         // import gameOver message
